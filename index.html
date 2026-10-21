@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jell Livros</title>
+  <title>JELL Livros</title>
   <link rel="stylesheet" href="src/css/estilo.css">
   <script src="src/js/script.js" defer></script>
 </head>
@@ -13,6 +12,9 @@
     <a class="logo" href="#topo" aria-label="Jell Livros - página inicial">
       <img src="src/assets/logo-jell.png" alt="Jell Livros">
     </a>
+
+    <!-- NOVO: título principal da página (editável pelo campo "Personalize o título") -->
+    <h1 id="titulo-site" class="site-titulo">JELL Livros</h1>
 
     <div id="busca" class="search-form" role="search">
       <label class="sr-only" for="busca-input">Pesquisar livros</label>
@@ -45,6 +47,19 @@
   </header>
 
   <main>
+    <section id="perfil" class="bloco" aria-labelledby="perfil-titulo">
+      <h2 class="bloco-titulo" id="perfil-titulo">Personalize o título da página</h2>
+      <p class="bloco-sub">Digite seu nome ou o termo de sua preferência e o título do topo muda na hora.</p>
+
+      <form id="form-titulo" class="linha-form" autocomplete="off">
+        <label class="sr-only" for="titulo-input">Novo título da página</label>
+        <input id="titulo-input" type="text" maxlength="24" placeholder="Ex.: Livros da Ana">
+        <button type="submit" class="btn">Atualizar título</button>
+        <button type="button" class="btn btn-sec" id="titulo-reset">Restaurar padrão</button>
+      </form>
+      <p class="msg" id="titulo-msg" role="status"></p>
+    </section>
+
     <section id="cards" aria-labelledby="cards-titulo">
       <h2 class="cards-titulo" id="cards-titulo">Destaques da livraria</h2>
       <p class="cards-subtitulo">Livros para entender o presente e o futuro da tecnologia.</p>
@@ -60,7 +75,7 @@
             <p>Entenda como a IA funciona, onde ela já está presente e para onde caminha.</p>
             <div class="card-rodape">
               <span class="card-preco">R$ 69,90</span>
-              <button class="btn-comprar" type="button" data-titulo="Inteligência Artificial" data-preco="R$ 69,90">Adicionar ao carrinho</button>
+              <button class="btn-comprar adicionar" type="button" data-titulo="Inteligência Artificial" data-preco="R$ 69,90">Adicionar ao carrinho</button>
             </div>
           </div>
         </article>
@@ -75,7 +90,7 @@
             <p>Uma reflexão sobre como tecnologia e humanidade se influenciam e o que vem pela frente.</p>
             <div class="card-rodape">
               <span class="card-preco">R$ 59,90</span>
-              <button class="btn-comprar" type="button" data-titulo="Tecnologia X Humanidade" data-preco="R$ 59,90">Adicionar ao carrinho</button>
+              <button class="btn-comprar adicionar" type="button" data-titulo="Tecnologia X Humanidade" data-preco="R$ 59,90">Adicionar ao carrinho</button>
             </div>
           </div>
         </article>
@@ -90,7 +105,7 @@
             <p>Como a inteligência artificial pode transformar o que significa ser humano.</p>
             <div class="card-rodape">
               <span class="card-preco">R$ 79,90</span>
-              <button class="btn-comprar" type="button" data-titulo="Vida 3.0" data-preco="R$ 79,90">Adicionar ao carrinho</button>
+              <button class="btn-comprar adicionar" type="button" data-titulo="Vida 3.0" data-preco="R$ 79,90">Adicionar ao carrinho</button>
             </div>
           </div>
         </article>
@@ -105,7 +120,7 @@
             <p>Explorando os avanços e implicações da ciência e tecnologia moderna.</p>
             <div class="card-rodape">
               <span class="card-preco">R$ 89,90</span>
-              <button class="btn-comprar" type="button" data-titulo="Ciência e Tecnologia" data-preco="R$ 89,90">Adicionar ao carrinho</button>
+              <button class="btn-comprar adicionar" type="button" data-titulo="Ciência e Tecnologia" data-preco="R$ 89,90">Adicionar ao carrinho</button>
             </div>
           </div>
         </article>
@@ -120,12 +135,68 @@
             <p>Explorando o impacto da tecnologia no desenvolvimento infantil.</p>
             <div class="card-rodape">
               <span class="card-preco">R$ 99,90</span>
-              <button class="btn-comprar" type="button" data-titulo="Tecnologia na Infância" data-preco="R$ 99,90">Adicionar ao carrinho</button>
+              <button class="btn-comprar adicionar" type="button" data-titulo="Tecnologia na Infância" data-preco="R$ 99,90">Adicionar ao carrinho</button>
             </div>
           </div>
         </article>
       </div>
     </section>
+
+    <section id="vitrine" class="bloco" aria-labelledby="vitrine-titulo">
+      <h2 class="bloco-titulo" id="vitrine-titulo">Mais vendidos do mês</h2>
+      <p class="bloco-sub">Troque o livro de uma posição: digite o título e o número da posição (1 a 3).</p>
+
+      <ol id="ranking" class="ranking"></ol>
+
+      <form id="form-ranking" class="linha-form" autocomplete="off">
+        <label class="sr-only" for="rank-titulo">Título do livro</label>
+        <input id="rank-titulo" type="text" maxlength="40" placeholder="Título do livro">
+        <label class="sr-only" for="rank-pos">Posição</label>
+        <input id="rank-pos" type="number" min="1" max="3" placeholder="Posição (1 a 3)">
+        <button type="submit" class="btn">Atualizar posição</button>
+      </form>
+      <p class="msg" id="rank-msg" role="status"></p>
+    </section>
+
+    <section id="lancamentos" class="bloco" aria-labelledby="lanc-titulo">
+      <h2 class="bloco-titulo" id="lanc-titulo">Calendário de lançamentos</h2>
+      <p class="bloco-sub">Digite o número do mês (ou clique nele) para ver o que chega à livraria.</p>
+
+      <div class="lanc-layout">
+        <ol id="lanc-lista" class="lanc-lista"></ol>
+
+        <div class="lanc-painel">
+          <form id="form-lanc" class="linha-form" autocomplete="off">
+            <label class="sr-only" for="lanc-num">Número do mês</label>
+            <input id="lanc-num" type="number" min="1" max="6" placeholder="Número do mês (1 a 6)">
+            <button type="submit" class="btn">Ver lançamentos</button>
+          </form>
+          <div id="lanc-resultado" class="lanc-resultado" aria-live="polite">
+            <p class="dica">Escolha um número para ver os lançamentos do mês.</p>
+          </div>
+          <p class="dica" id="lanc-dica">Passe o mouse sobre um mês.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="previa" class="bloco" aria-labelledby="previa-titulo">
+      <h2 class="bloco-titulo" id="previa-titulo">Prévia do livro</h2>
+      <p class="bloco-sub">Escolha um livro e veja a capa dele em um e-reader.</p>
+
+      <div class="linha-form">
+        <label class="sr-only" for="previa-select">Livro</label>
+        <select id="previa-select"></select>
+        <button type="button" class="btn" id="previa-gerar">Gerar Prévia do Livro</button>
+        <button type="button" class="btn btn-sec" id="previa-limpar">Limpar prévias</button>
+      </div>
+      <p class="msg" id="previa-msg" role="status"></p>
+      <div id="previa-area" class="previa-area"></div>
+    </section>
+
   </main>
+  <footer class="site-footer">
+      <p>&copy; 2026 JELL Livros. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
