@@ -822,3 +822,97 @@ body.dark-mode .rank-num {
 
 
 
+.lanc-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.lanc-lista {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lanc-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  padding: 11px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--input-bg);
+  font-size: 14px;
+  font-weight: 550;
+  cursor: pointer;
+  transition: background-color .2s, border-color .2s, color .2s;
+}
+
+.lanc-item:hover {
+  border-color: var(--accent);
+}
+
+.lanc-item:focus-visible {
+  outline: 3px solid rgba(133, 88, 61, .4);
+  outline-offset: 2px;
+}
+
+.lanc-item .lanc-num {
+  flex: 0 0 24px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.lanc-item.ativo {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+
+.lanc-item.ativo .lanc-num {
+  color: inherit;
+}
+
+body.dark-mode .lanc-item.ativo {
+  color: #191715;
+}
+
+.lanc-resultado {
+  margin-top: 16px;
+  padding: 18px;
+  min-height: 120px;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+}
+
+.lanc-resultado .dica {
+  margin: 0;
+}
+
+.lanc-resultado h3 {
+  margin: 8px 0 6px;
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.lanc-resultado p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.lanc-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--input-bg);
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+
