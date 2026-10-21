@@ -608,15 +608,13 @@ body.dark-mode #cards .card:focus-within {
   }
 }
 
-/* =====================================================
-   COLE ESTE BLOCO NO FINAL DO src/css/estilo.css
-   ===================================================== */
+
 
 body.dark-mode {
   color-scheme: dark;
 }
 
-/* ===== TÍTULO DO SITE (header) ===== */
+
 
 .site-titulo {
   flex: 0 1 auto;
@@ -635,7 +633,7 @@ body.dark-mode {
   transition: color .2s;
 }
 
-/* ===== BLOCOS NOVOS (título, vitrine, lançamentos, prévia) ===== */
+
 
 .bloco {
   width: min(1300px, calc(100% - 80px));
@@ -771,7 +769,7 @@ body.dark-mode .msg.erro { color: #ff9b85; }
   color: var(--muted);
 }
 
-/* ===== VITRINE: MAIS VENDIDOS ===== */
+
 
 .ranking {
   display: grid;
@@ -825,7 +823,7 @@ body.dark-mode .rank-num {
   animation: pulso .8s ease;
 }
 
-/* ===== CALENDÁRIO DE LANÇAMENTOS ===== */
+
 
 .lanc-layout {
   display: grid;
@@ -920,7 +918,7 @@ body.dark-mode .lanc-item.ativo {
   font-weight: 600;
 }
 
-/* ===== PRÉVIA DO LIVRO (e-reader) ===== */
+
 
 .previa-area {
   display: flex;
@@ -965,3 +963,45 @@ body.dark-mode .lanc-item.ativo {
   to   { box-shadow: 0 0 0 16px rgba(133, 88, 61, 0); }
 }
 
+
+
+@media (max-width: 850px) {
+  .site-titulo {
+    flex: 1 1 0;
+    max-width: none;
+  }
+
+  .bloco {
+    width: calc(100% - 48px);
+  }
+
+  .lanc-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .site-titulo {
+    font-size: 1.05rem;
+  }
+
+  .bloco {
+    width: calc(100% - 32px);
+    padding: 18px;
+  }
+
+  .btn {
+    flex: 1 1 auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ereader,
+  .ereader.destaque,
+  .atualizado,
+  .rank-item,
+  .btn {
+    animation: none;
+    transition: none;
+  }
+}
