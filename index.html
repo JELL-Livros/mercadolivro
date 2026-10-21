@@ -3,9 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JELL Livros</title>
+    <link rel="shortcut icon" href="./src/assets/Logo.jpg">
+    <link rel="stylesheet" href="./src/css/estilo.css">
+    <title>Mercado Livre</title>
+   
 </head>
+
 <body>
-    
-</body>
-</html>
+
+<div id="main">
+        
+        <!-- Cabeçalho principal da página -->
+        <header id="topo">
+            <div id="logo">
+                <a href="#">
+                    <img src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/6.6.34/mercadolibre/logo_large_25years.png" alt="Logo Mercado Livre">
+                </a>
+            </div>
+
+            <!-- Área de busca -->
+            <search id="busca">
+                <form role="search">
+                    <input type="text" id="busca-input" placeholder="Digite sua busca">
+                </form>
+            </search>
+
+            <nav id="menu">
+                <a href="#">Crie sua Conta</a>
+                <a href="#">Entre</a>
+                <a href="#">Compras</a>
+                <a href="#" label="Carrinho de compras">
+                    <img src="./src/assets/carrinho.png" alt="Ícone do carrinho">
+                </a>
+
+                <!-- Botão de Alternância de Tema (Dark/Light) -->
+                <div class="theme">
+                    <input type="checkbox" id="dark" class="check">
+                    <label for="dark" class="theme-label" title="Alternar tema"><img src="./src/assets/darkMode.png"></label>
+                </div>
+            </nav>
+        </header>
