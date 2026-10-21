@@ -141,6 +141,23 @@
         </article>
       </div>
     </section>
+
+    <section id="vitrine" class="bloco" aria-labelledby="vitrine-titulo">
+      <h2 class="bloco-titulo" id="vitrine-titulo">Mais vendidos do mês</h2>
+      <p class="bloco-sub">Troque o livro de uma posição: digite o título e o número da posição (1 a 3).</p>
+
+      <ol id="ranking" class="ranking"></ol>
+
+      <form id="form-ranking" class="linha-form" autocomplete="off">
+        <label class="sr-only" for="rank-titulo">Título do livro</label>
+        <input id="rank-titulo" type="text" maxlength="40" placeholder="Título do livro">
+        <label class="sr-only" for="rank-pos">Posição</label>
+        <input id="rank-pos" type="number" min="1" max="3" placeholder="Posição (1 a 3)">
+        <button type="submit" class="btn">Atualizar posição</button>
+      </form>
+      <p class="msg" id="rank-msg" role="status"></p>
+    </section>
+
   </main>
 </body>
 </html>
