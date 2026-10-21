@@ -1,0 +1,36 @@
+:root {
+  --ml-amarelo: #ffe600;     /* amarelo do cabeçalho */
+  --ml-azul: #3483fa;        /* azul usado no foco */
+  --ml-texto: #333333;
+  --ml-texto-suave: #666666;
+}
+
+/* ---------- HEADER ---------- */
+#topo,
+#topo * {
+  box-sizing: border-box;
+}
+
+#topo {
+  position: sticky;          /* fica preso no topo ao rolar a página */
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 10px 32px;
+  background: var(--ml-amarelo);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- LOGO ---------- */
+#logo a {
+  display: block;
+}
+
+#logo img {
+  display: block;
+  height: 34px;
+  width: auto;
+}
