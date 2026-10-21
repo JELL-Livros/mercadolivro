@@ -431,7 +431,6 @@ body.dark-mode #cards .card:focus-within {
   box-shadow: 0 16px 34px rgba(0, 0, 0, .5);
 }
 
-/* ===== ANIMAÇÕES ===== */
 
 @keyframes card-entra {
   from {
@@ -450,7 +449,6 @@ body.dark-mode #cards .card:focus-within {
   }
 }
 
-/* ===== RESPONSIVIDADE ===== */
 
 @media (max-width: 1150px) {
   .site-header {
