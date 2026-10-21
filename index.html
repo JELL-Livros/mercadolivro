@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jell Livros</title>
+  <title>JELL Livros</title>
   <link rel="stylesheet" href="src/css/estilo.css">
   <script src="src/js/script.js" defer></script>
 </head>
@@ -13,6 +12,9 @@
     <a class="logo" href="#topo" aria-label="Jell Livros - página inicial">
       <img src="src/assets/logo-jell.png" alt="Jell Livros">
     </a>
+
+    <!-- NOVO: título principal da página (editável pelo campo "Personalize o título") -->
+    <h1 id="titulo-site" class="site-titulo">JELL Livros</h1>
 
     <div id="busca" class="search-form" role="search">
       <label class="sr-only" for="busca-input">Pesquisar livros</label>
@@ -45,6 +47,19 @@
   </header>
 
   <main>
+    <section id="perfil" class="bloco" aria-labelledby="perfil-titulo">
+      <h2 class="bloco-titulo" id="perfil-titulo">Personalize o título da página</h2>
+      <p class="bloco-sub">Digite seu nome ou o termo de sua preferência e o título do topo muda na hora.</p>
+
+      <form id="form-titulo" class="linha-form" autocomplete="off">
+        <label class="sr-only" for="titulo-input">Novo título da página</label>
+        <input id="titulo-input" type="text" maxlength="24" placeholder="Ex.: Livros da Ana">
+        <button type="submit" class="btn">Atualizar título</button>
+        <button type="button" class="btn btn-sec" id="titulo-reset">Restaurar padrão</button>
+      </form>
+      <p class="msg" id="titulo-msg" role="status"></p>
+    </section>
+
     <section id="cards" aria-labelledby="cards-titulo">
       <h2 class="cards-titulo" id="cards-titulo">Destaques da livraria</h2>
       <p class="cards-subtitulo">Livros para entender o presente e o futuro da tecnologia.</p>
@@ -60,7 +75,7 @@
             <p>Entenda como a IA funciona, onde ela já está presente e para onde caminha.</p>
             <div class="card-rodape">
               <span class="card-preco">R$ 69,90</span>
-              <button class="btn-comprar" type="button" data-titulo="Inteligência Artificial" data-preco="R$ 69,90">Adicionar ao carrinho</button>
+              <button class="btn-comprar adicionar" type="button" data-titulo="Inteligência Artificial" data-preco="R$ 69,90">Adicionar ao carrinho</button>
             </div>
           </div>
         </article>
@@ -75,7 +90,7 @@
             <p>Uma reflexão sobre como tecnologia e humanidade se influenciam e o que vem pela frente.</p>
             <div class="card-rodape">
               <span class="card-preco">R$ 59,90</span>
-              <button class="btn-comprar" type="button" data-titulo="Tecnologia X Humanidade" data-preco="R$ 59,90">Adicionar ao carrinho</button>
+              <button class="btn-comprar adicionar" type="button" data-titulo="Tecnologia X Humanidade" data-preco="R$ 59,90">Adicionar ao carrinho</button>
             </div>
           </div>
         </article>
@@ -90,7 +105,7 @@
             <p>Como a inteligência artificial pode transformar o que significa ser humano.</p>
             <div class="card-rodape">
               <span class="card-preco">R$ 79,90</span>
-              <button class="btn-comprar" type="button" data-titulo="Vida 3.0" data-preco="R$ 79,90">Adicionar ao carrinho</button>
+              <button class="btn-comprar adicionar" type="button" data-titulo="Vida 3.0" data-preco="R$ 79,90">Adicionar ao carrinho</button>
             </div>
           </div>
         </article>
@@ -105,7 +120,7 @@
             <p>Explorando os avanços e implicações da ciência e tecnologia moderna.</p>
             <div class="card-rodape">
               <span class="card-preco">R$ 89,90</span>
-              <button class="btn-comprar" type="button" data-titulo="Ciência e Tecnologia" data-preco="R$ 89,90">Adicionar ao carrinho</button>
+              <button class="btn-comprar adicionar" type="button" data-titulo="Ciência e Tecnologia" data-preco="R$ 89,90">Adicionar ao carrinho</button>
             </div>
           </div>
         </article>
@@ -120,7 +135,7 @@
             <p>Explorando o impacto da tecnologia no desenvolvimento infantil.</p>
             <div class="card-rodape">
               <span class="card-preco">R$ 99,90</span>
-              <button class="btn-comprar" type="button" data-titulo="Tecnologia na Infância" data-preco="R$ 99,90">Adicionar ao carrinho</button>
+              <button class="btn-comprar adicionar" type="button" data-titulo="Tecnologia na Infância" data-preco="R$ 99,90">Adicionar ao carrinho</button>
             </div>
           </div>
         </article>
