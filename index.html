@@ -1,11 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JELL Livros</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jell Livros</title>
+  <link rel="stylesheet" href="src/css/estilo.css">
+  <script src="src/js/script.js" defer></script>
 </head>
 <body>
-    
+  <header id="topo" class="site-header">
+    <a class="logo" href="#topo" aria-label="Jell Livros - página inicial">
+      <img src="src/assets/logo-jell.png" alt="Jell Livros">
+    </a>
+
+    <div id="busca" class="search-form" role="search">
+      <label class="sr-only" for="busca-input">Pesquisar livros</label>
+      <input id="busca-input" type="search" placeholder="Pesquisar livros..." autocomplete="off">
+      <button type="button" class="search-button" aria-label="Pesquisar" title="Pesquisar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+      </button>
+    </div>
+
+    <nav id="menu" aria-label="Menu principal">
+      <a href="#conta">Crie sua conta</a>
+      <a href="#entrar">Entre</a>
+      <a href="#compras">Compras</a>
+      <a href="#carrinho" class="cart-link" aria-label="Carrinho de compras" title="Carrinho de compras">
+        <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M2.5 3.5h2.2l2.1 11.1a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 1.9-1.4L21 8H6" />
+          <circle cx="9.2" cy="20" r="1.2" />
+          <circle cx="17.6" cy="20" r="1.2" />
+        </svg>
+      </a>
+    </nav>
+
+    <button type="button" class="theme-button" id="theme-button" aria-label="Ativar modo escuro" title="Alternar modo claro/escuro">
+      <span id="theme-icon" aria-hidden="true">☾</span>
+    </button>
+  </header>
 </body>
 </html>
