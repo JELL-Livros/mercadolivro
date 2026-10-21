@@ -158,6 +158,41 @@
       <p class="msg" id="rank-msg" role="status"></p>
     </section>
 
+    <section id="lancamentos" class="bloco" aria-labelledby="lanc-titulo">
+      <h2 class="bloco-titulo" id="lanc-titulo">Calendário de lançamentos</h2>
+      <p class="bloco-sub">Digite o número do mês (ou clique nele) para ver o que chega à livraria.</p>
+
+      <div class="lanc-layout">
+        <ol id="lanc-lista" class="lanc-lista"></ol>
+
+        <div class="lanc-painel">
+          <form id="form-lanc" class="linha-form" autocomplete="off">
+            <label class="sr-only" for="lanc-num">Número do mês</label>
+            <input id="lanc-num" type="number" min="1" max="6" placeholder="Número do mês (1 a 6)">
+            <button type="button" class="btn">Ver lançamentos</button>
+          </form>
+          <div id="lanc-resultado" class="lanc-resultado" aria-live="polite">
+            <p class="dica">Escolha um número para ver os lançamentos do mês.</p>
+          </div>
+          <p class="dica" id="lanc-dica">Passe o mouse sobre um mês.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOVO: geração dinâmica de imagem (prévia do livro) -->
+    <section id="previa" class="bloco" aria-labelledby="previa-titulo">
+      <h2 class="bloco-titulo" id="previa-titulo">Prévia do livro</h2>
+      <p class="bloco-sub">Escolha um livro e veja a capa dele em um e-reader.</p>
+
+      <div class="linha-form">
+        <label class="sr-only" for="previa-select">Livro</label>
+        <select id="previa-select"></select>
+        <button type="button" class="btn" id="previa-gerar">Gerar Prévia do Livro</button>
+        <button type="button" class="btn btn-sec" id="previa-limpar">Limpar prévias</button>
+      </div>
+      <p class="msg" id="previa-msg" role="status"></p>
+      <div id="previa-area" class="previa-area"></div>
+    </section>
   </main>
 </body>
 </html>
