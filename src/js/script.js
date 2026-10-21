@@ -268,7 +268,7 @@ function renderizarLancamentos() {
             }
         });
 
-        // Evento de mouse: muda o texto da dica ao passar o mouse
+        // Evento de mouse: muda o texto da dica ao passar o mouse por cima
         item.addEventListener("mouseover", () => {
             lancDica.textContent = `Clique para ver os lançamentos de ${lancamento.mes}.`;
         });
