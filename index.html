@@ -9,51 +9,54 @@
   <script src="src/js/script.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-top">
-      <a class="brand" href="#" aria-label="Jell Livros - página inicial">
-        <img src="src/assets/logo-jell.png" alt="Jell Livros" class="brand-logo">
-      </a>
+ <header class="site-header">
+  <div class="header-top">
+    <a class="brand" href="#" aria-label="Jell Livros - página inicial">
+      <img src="src/assets/logo-jell.png" alt="Jell Livros" class="brand-logo">
+    </a>
 
-      <form class="search-form" id="search-form" role="search">
-        <label class="sr-only" for="search-input">Buscar livros ou tecnologias</label>
-        <input id="search-input" name="q" type="search"
-          placeholder="Busque livros, cursos ou tecnologias..." autocomplete="off">
-        <button type="submit" class="search-button" aria-label="Pesquisar">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
-          <span>Buscar</span>
-        </button>
-      </form>
+    <form class="search-form" id="search-form" role="search">
+      <label class="sr-only" for="search-input">Buscar livros ou tecnologias</label>
+      <input id="search-input" name="q" type="search"
+             placeholder="Busque livros, cursos ou tecnologias..." autocomplete="off">
+      <button type="submit" class="search-button" aria-label="Pesquisar">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="10.8" cy="10.8" r="6.8"></circle>
+          <path d="m16 16 5 5"></path>
+        </svg>
+        <span>Buscar</span>
+      </button>
+    </form>
 
-      <div class="header-actions">
-        <a href="#conta" class="action-link"><span class="action-icon" aria-hidden="true">♙</span><span>Crie sua conta</span></a>
-        <a href="#entrar" class="action-link"><span class="action-icon" aria-hidden="true">↪</span><span>Entre</span></a>
-        <a href="#compras" class="action-link"><span class="action-icon" aria-hidden="true">▤</span><span>Compras</span></a>
-        <button class="cart-button" id="cart-button" type="button" aria-label="Carrinho de compras">
-          <span class="cart-icon" aria-hidden="true">🛒</span>
-          <span>Carrinho</span><span class="cart-count" id="cart-count">0</span>
-        </button>
-      </div>
+    <div class="header-actions">
+      <a href="#conta" class="action-link">Crie sua conta</a>
+      <a href="#entrar" class="action-link">Entre</a>
+      <a href="#compras" class="action-link">Compras</a>
+      <button class="cart-button" id="cart-button" type="button" aria-label="Carrinho de compras">
+        <span class="cart-icon" aria-hidden="true">🛒</span>
+        <span>Carrinho</span>
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
     </div>
+  </div>
 
-    <div class="header-bottom">
-      <nav class="main-nav" aria-label="Navegação principal">
-        <a href="#inicio" class="nav-link active">Início</a>
-        <a href="#livros" class="nav-link">Livros</a>
-        <a href="#programacao" class="nav-link">Programação</a>
-        <a href="#cursos" class="nav-link">Cursos</a>
-        <a href="#lancamentos" class="nav-link">Lançamentos</a>
-      </nav>
+  <div class="header-bottom">
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="#inicio" class="nav-link active">Início</a>
+      <a href="#livros" class="nav-link">Livros</a>
+      <a href="#programacao" class="nav-link">Programação</a>
+      <a href="#cursos" class="nav-link">Cursos</a>
+      <a href="#lancamentos" class="nav-link">Lançamentos</a>
+    </nav>
 
-      <label class="theme-switch" for="theme-toggle">
-        <span class="theme-label" id="theme-label">Modo claro</span>
-        <input type="checkbox" id="theme-toggle" role="switch" aria-label="Alternar entre modo claro e escuro">
-        <span class="switch-track"><span class="switch-thumb"></span></span>
-        <span class="theme-symbol" id="theme-symbol" aria-hidden="true">☀</span>
-      </label>
-    </div>
-  </header>
-
+    <label class="theme-switch" for="theme-toggle">
+      <span class="theme-label" id="theme-label">Modo claro</span>
+      <input type="checkbox" id="theme-toggle" role="switch" aria-label="Alternar tema">
+      <span class="switch-track"><span class="switch-thumb"></span></span>
+      <span class="theme-symbol" id="theme-symbol" aria-hidden="true">☀</span>
+    </label>
+  </div>
+</header>
   <main id="inicio">
     <section class="welcome-section">
       <div class="welcome-copy">
