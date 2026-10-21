@@ -612,7 +612,26 @@ body.dark-mode {
   color-scheme: dark;
 }
 
+.site-footer {
+  width: 100%;
+  padding: 24px clamp(20px, 4vw, 60px);
+  text-align: center;
+  background: var(--header);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -5px 22px rgba(53, 37, 25, .05);
+  transition: background-color .2s, border-color .2s;
+}
 
+.site-footer p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+body.dark-mode .site-footer {
+  box-shadow: 0 -5px 22px rgba(0, 0, 0, .2);
+}
 
 .site-titulo {
   flex: 0 1 auto;
