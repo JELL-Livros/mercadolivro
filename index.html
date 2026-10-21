@@ -3,93 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Jell Livros — livros, tecnologia e programação.">
-  <title>Jell Livros | Livraria dos Desenvolvedores</title>
+  <title>Jell Livros</title>
   <link rel="stylesheet" href="src/css/estilo.css">
   <script src="src/js/script.js" defer></script>
 </head>
 <body>
- <header class="site-header">
-  <div class="header-top">
-    <a class="brand" href="#" aria-label="Jell Livros - página inicial">
-      <img src="src/assets/logo-jell.png" alt="Jell Livros" class="brand-logo">
+  <header id="topo" class="site-header">
+    <a class="logo" href="#topo" aria-label="Jell Livros - página inicial">
+      <img src="src/assets/logo-jell.png" alt="Jell Livros">
     </a>
 
-    <form class="search-form" id="search-form" role="search">
-      <label class="sr-only" for="search-input">Buscar livros ou tecnologias</label>
-      <input id="search-input" name="q" type="search"
-             placeholder="Busque livros, cursos ou tecnologias..." autocomplete="off">
-      <button type="submit" class="search-button" aria-label="Pesquisar">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <circle cx="10.8" cy="10.8" r="6.8"></circle>
-          <path d="m16 16 5 5"></path>
-        </svg>
-        <span>Buscar</span>
-      </button>
-    </form>
-
-    <div class="header-actions">
-      <a href="#conta" class="action-link">Crie sua conta</a>
-      <a href="#entrar" class="action-link">Entre</a>
-      <a href="#compras" class="action-link">Compras</a>
-      <button class="cart-button" id="cart-button" type="button" aria-label="Carrinho de compras">
-        <span class="cart-icon" aria-hidden="true">🛒</span>
-        <span>Carrinho</span>
-        <span class="cart-count" id="cart-count">0</span>
+    <div id="busca" class="search-form" role="search">
+      <label class="sr-only" for="busca-input">Pesquisar livros</label>
+      <input id="busca-input" type="search" placeholder="Pesquisar livros..." autocomplete="off">
+      <button type="button" class="search-button" aria-label="Pesquisar" title="Pesquisar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
       </button>
     </div>
-  </div>
 
-  <div class="header-bottom">
-    <nav class="main-nav" aria-label="Navegação principal">
-      <a href="#inicio" class="nav-link active">Início</a>
-      <a href="#livros" class="nav-link">Livros</a>
-      <a href="#programacao" class="nav-link">Programação</a>
-      <a href="#cursos" class="nav-link">Cursos</a>
-      <a href="#lancamentos" class="nav-link">Lançamentos</a>
+    <nav id="menu" aria-label="Menu principal">
+      <a href="#conta">Crie sua conta</a>
+      <a href="#entrar">Entre</a>
+      <a href="#compras">Compras</a>
     </nav>
 
-    <label class="theme-switch" for="theme-toggle">
-      <span class="theme-label" id="theme-label">Modo claro</span>
-      <input type="checkbox" id="theme-toggle" role="switch" aria-label="Alternar tema">
-      <span class="switch-track"><span class="switch-thumb"></span></span>
-      <span class="theme-symbol" id="theme-symbol" aria-hidden="true">☀</span>
-    </label>
-  </div>
-</header>
-  <main id="inicio">
-    <section class="welcome-section">
-      <div class="welcome-copy">
-        <span class="eyebrow">JELL LIVROS • CONHECIMENTO EM CADA PÁGINA</span>
-        <h1>Seu próximo capítulo <span>começa aqui.</span></h1>
-        <p>Explore livros, ferramentas e conteúdos para levar suas ideias e seus projetos mais longe.</p>
-        <a class="primary-link" href="#livros">Explorar catálogo <span aria-hidden="true">→</span></a>
-      </div>
-      <div class="welcome-art" aria-hidden="true">
-        <div class="book book-back"></div>
-        <div class="book book-middle"></div>
-        <div class="book book-front"><span>JELL<br>BOOKS</span></div>
-        <span class="spark spark-one">✦</span><span class="spark spark-two">✧</span>
-      </div>
-    </section>
-
-    <section class="search-feedback" id="search-feedback" aria-live="polite"></section>
-
-    <section class="placeholder-section" id="livros">
-      <p class="eyebrow">VITRINE JELL</p>
-      <h2>Conhecimento para construir o futuro</h2>
-      <p class="section-note">O cabeçalho, a navegação, a busca e o alternador de tema fazem parte da entrega do Dev 1.</p>
-      <div class="mini-grid">
-        <article class="mini-card"><span>01</span><h3>Programação</h3><p>Aprenda, pratique e evolua com novas ideias.</p></article>
-        <article class="mini-card"><span>02</span><h3>Tecnologia</h3><p>Descubra ferramentas para seus próximos projetos.</p></article>
-        <article class="mini-card"><span>03</span><h3>Novos mundos</h3><p>Encontre sua próxima leitura favorita.</p></article>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <a href="#" class="footer-brand">Jell <span>Livros</span></a>
-    <p>© <span id="current-year"></span> Jell Livros. Todos os direitos reservados.</p>
-  </footer>
+    <button type="button" class="theme-button" id="theme-button" aria-label="Ativar modo escuro" title="Alternar modo claro/escuro">
+      <span id="theme-icon" aria-hidden="true">☾</span>
+    </button>
+  </header>
 </body>
 </html>
+
