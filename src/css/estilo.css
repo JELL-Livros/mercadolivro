@@ -15,6 +15,10 @@
   box-sizing: border-box;
 }
 
+body.dark-mode {
+  color-scheme: dark;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -607,3 +611,24 @@ body.dark-mode #cards .card:focus-within {
     animation: none;
   }
 }
+
+
+.site-titulo {
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 240px;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: .01em;
+  line-height: 1.2;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color .2s;
+}
+
+
+
